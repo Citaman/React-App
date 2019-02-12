@@ -1,27 +1,32 @@
 import React from 'react';
-import './Spiritualite.css'
+import './Spiritualite.css';
+
 class Spiritualite extends React.Component{
     constructor(props){
         super(props);
 
         this.state ={
             Title : 'Spiritualite',
-            Text : 'Ici represente la bar latterale'
+            Text : 'Ici represente la bar latterale',
+            list_nav : ['Predication','Acitvité','Etude','Projet']
         }
+    }
+
+    nav_button(){
+        return this.state.list_nav.map(element => <div className= 'nav-Button-wrapper'>
+                                                    <p className ='nav-Button'>{element}</p>
+                                                  </div>)
     }
     render(){
         return (
             <div>
                 <div id ='Container'>
                     <div id ='Nav_bar'>
-                        <div>
-                            <h1>Spiritualite</h1>
+                        <div className='header'>
+                            <div className ='Title-header'>Spiritualite</div>
                         </div>
                         <div>
-                            <p>Predication</p>
-                            <p>Acitvité</p>
-                            <p>Etude</p>
-                            <p>Projet</p>
+                            {this.nav_button()}
                         </div>
                     </div>
                     <div id='Main'>b</div>

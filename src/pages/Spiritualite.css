@@ -1,5 +1,5 @@
 #Nav_bar{
-    background-color: lightblue;
+    background-image: url("../images/sky.png");
     flex: 2;
     
 }
@@ -11,4 +11,29 @@
 #Container{
     display: flex;
     height: 100vh;
+}
+.header{
+    background-color: #6BFFB8;
+    
+}
+.Title-header{
+    font: 30px 'Futura';
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 3em;
+}
+.nav-Button{
+    font: 20px 'Futura';
+    color: white;
+   
+    margin: 0.3em 0 0.3em 1.5em;
+}
+.nav-Button-wrapper{
+    margin: 4em;
+    margin-right: 0px;
+    border-radius: 25px 0 0 25px;
+    background-color:  #6BFFB8;
+    padding : 1px;
+
 }
