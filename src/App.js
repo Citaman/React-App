@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Spiritualite from './Spiritualite';
+import Spiritualite from './pages/Spiritualite';
 
 class App extends Component {
 

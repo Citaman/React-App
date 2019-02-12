@@ -1,0 +1,14 @@
+#Nav_bar{
+    background-color: lightblue;
+    flex: 2;
+    
+}
+#Main{
+    background-color: lightcoral;
+    flex: 10;
+    box-shadow: -2px 0px 3px gray;
+}
+#Container{
+    display: flex;
+    height: 100vh;
+}
