@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
-import Spiritualite from './pages/Spirituality';
+import Spirituality from './pages/Spirituality';
+import Home from './pages/Home';
+import NavBar from './components/Nav-Bar/NavBar';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-class App extends Component {
+export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
-          <Spiritualite/>
-      </div>
-      
+      <Router>
+        <div className='Container'>
+          <NavBar />
+          <Route exact path='/' component={Spirituality} />
+        </div>
+      </Router>
     );
   }
 }
-
-export default App;
