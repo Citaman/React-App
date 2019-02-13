@@ -12,7 +12,7 @@ export default class Spirituality extends React.Component {
     
     render() {
         return (
-                <div id='Main'></div>
+                <div id='Main'>Spiritualité</div>
         )
     }
 }
