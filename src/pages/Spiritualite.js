@@ -1,5 +1,5 @@
 import React from 'react';
-import './Spiritualite.css';
+import '../styles/Spiritualite.css';
 
 class Spiritualite extends React.Component{
     constructor(props){
