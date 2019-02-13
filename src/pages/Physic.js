@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Physique extends React.Component{
+class Physic extends React.Component{
     constructor(props){
         super(props);
 
@@ -21,4 +21,4 @@ class Physique extends React.Component{
     }
 }
 
-export default Physique;
+export default Physic;

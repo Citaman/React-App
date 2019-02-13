@@ -13,8 +13,8 @@ class Spiritualite extends React.Component{
     }
 
     nav_button(){
-        return this.state.list_nav.map(element => <div className= 'nav-Button-wrapper'>
-                                                    <p className ='nav-Button'>{element}</p>
+        return this.state.list_nav.map(element => <div className= 'nav-Button-wrapper-default'>
+                                                    <p className ='nav-Button-default'>{element}</p>
                                                   </div>)
     }
     render(){
