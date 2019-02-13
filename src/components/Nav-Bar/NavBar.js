@@ -8,7 +8,7 @@ export default class NavBar extends React.Component {
         this.state = {
             Title: 'Spiritualié',
             Text: 'Ici represente la bar latterale',
-            list_nav: ['Predication', 'Acitvité', 'Etude', 'Projet']
+            list_nav: ['Prédication', 'Acitvité', 'Étude', 'Projet']
         }
     }
 
