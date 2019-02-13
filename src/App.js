@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import './App.css';
-import Spirituality from './pages/Spirituality';
-import Accounting from './pages/Accounting';
-import Activity from './pages/Activity';
-import InterestingSubject from './pages/InterestingSubject';
-import Predication from './pages/Predication';
-import Project from './pages/Project';
-import Study from './pages/Study';
-import Home from './pages/Home';
-import NavBar from './components/Nav-Bar/NavBar';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from 'react'
+import './App.css'
+import Spirituality from './pages/Spirituality'
+import Accounting from './pages/Accounting'
+import Activity from './pages/Activity'
+import InterestingSubject from './pages/InterestingSubject'
+import Predication from './pages/Predication'
+import Project from './pages/Project'
+import Study from './pages/Study'
+import Home from './pages/Home'
+import NavBar from './components/Nav-Bar/NavBar'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 export default class App extends Component {
 
@@ -29,6 +29,6 @@ export default class App extends Component {
           <Route path='/physic/interest' component={InterestingSubject} />
         </div>
       </Router>
-    );
+    )
   }
 }
