@@ -22,8 +22,9 @@ class Spiritualite extends React.Component{
             <div>
                 <div id ='Container'>
                     <div id ='Nav_bar'>
+
                         <div className='header'>
-                            <div className ='Title-header'>Spiritualite</div>
+                            <div className ='Title-header'>Spiritualité</div>
                         </div>
                         <div>
                             {this.nav_button()}
