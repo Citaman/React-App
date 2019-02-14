@@ -1,52 +1,68 @@
-#Nav_bar{
+#Nav_bar {
     background-image: url("../../images/cosmos-dark-dusk.jpg");
     flex: 2;
     background-size: cover;
-   
 }
-.header{
+
+.header {
     background-color: #6BFFB8;
-    
 }
-.Title-header{
+
+.Title-header {
     font: 30px 'Futura';
     color: white;
     text-align: center;
     padding: 10px;
     margin-bottom: 3em;
 }
-.nav-Button-select{
+
+.nav-Button-select {
     font: 20px 'Futura';
-    color:#6BFFB8 ;
+    color: #6BFFB8;
     margin: 0.3em 0 0.3em 1.5em;
 }
-.nav-Button{
+
+.nav-Button {
     font: 20px 'Futura';
-    color:white ;
-   
+    color: white;
     margin: 0.3em 0 0.3em 1.5em;
 }
-.nav-Button-wrapper-select{
+
+.nav-Button-wrapper-select {
     margin: 4em;
     margin-right: 0px;
     border-radius: 25px 0 0 25px;
     background-color: white;
-    padding : 1px;
+    padding: 1px;
 }
-.nav-Button-wrapper{
+
+.nav-Button-wrapper {
     margin: 4em;
     margin-right: 0px;
     border-radius: 25px 0 0 25px;
-    background-color:rgba(0,0,0, 0.4);
-    padding : 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1px;
 }
-.nav-Button-wrapper:hover{
+
+.nav-Button-wrapper:hover {
     margin: 4em;
     margin-right: 0px;
     border-radius: 25px 0 0 25px;
-    background-color:rgba(255,255,255, 0.4);
-    padding : 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1px;
 }
-.Link{
+
+.Link {
     text-decoration: none;
+}
+
+.svg {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 16.6%;
+}
+.svg:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+
 }

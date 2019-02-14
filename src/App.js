@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './App.css'
-import Spirituality from './pages/Spirituality'
 import Accounting from './pages/Accounting'
 import Activity from './pages/Activity'
 import InterestingSubject from './pages/InterestingSubject'
