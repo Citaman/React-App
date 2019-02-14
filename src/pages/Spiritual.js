@@ -31,11 +31,3 @@ export default class Spiritual extends React.Component {
         )
     }
 }
-/*  
- <Route path='/spirituality' component={Predication} />
-                   <Route path='/spirituality/predication' component={Predication} />
-<NavBar /><Route exact path='/spirituality' component={Predication} />
-                    <Route path='/spirituality/predication' component={Predication} />
-                    <Route path='/spirituality/activity' component={Activity} />
-                    <Route path='/spirituality/study' component={Study} />
-                    <Route path='/spirituality/project' component={Project} /> */
