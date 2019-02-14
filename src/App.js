@@ -1,19 +1,47 @@
 import React, { Component } from 'react'
 import './App.css'
-import Accounting from './pages/Accounting'
-import Activity from './pages/Activity'
-import InterestingSubject from './pages/InterestingSubject'
-import Predication from './pages/Predication'
-import Project from './pages/Project'
-import Study from './pages/Study'
-import NavBar from './components/NavBar'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import Spiritual from './pages/Spiritual'
+import Physic from './pages/Physic'
+import Study from './components/Study'
+import Activity from  './components/Activity'
+import Predication from './components/Predication'
+import Accounting from './components/Accounting'
+import Project from './components/Project'
+import InterestingSubject from './components/InterestingSubject'
+import { BrowserRouter as Router, Route,Redirect } from "react-router-dom"
 
 export default class App extends Component {
 
   render() {
     return (
       <Router>
+        <div >
+          <Route exact path='/' component={Spiritual} />
+          <Route path='/spirituality' component={Spiritual} />
+          <Route path='/physic' component={Physic} />
+          <Route path='/spirituality/predication' component={Predication} />
+          <Route path='/spirituality/activity' component={Activity} />
+          <Route path='/spirituality/study' component={Study} />
+          <Route path='/spirituality/project' component={Project} />
+          <Route path='/physic/accounting' component={Accounting} />
+          <Route path='/physic/activity' component={Activity} />
+          <Route path='/physic/project' component={Project} />
+          <Route path='/physic/interest' component={InterestingSubject} />
+          <Route component={Nomatch}/>
+        </div>
+      </Router>
+    )
+  }
+}
+
+const Nomatch = ()=>(
+  <Redirect to='/spirituality/predication'/>
+)
+/*
+<Route exact path='/' component={Spiritual} />
+          <Route path='/spirituality' component={Spiritual} />
+          <Route path='/physic' component={Physic} /> 
+<Router>
         <div className='Container'>
           <NavBar />
           <Route exact path='/' component={Predication} />
@@ -26,7 +54,4 @@ export default class App extends Component {
           <Route path='/physic/project' component={Project} />
           <Route path='/physic/interest' component={InterestingSubject} />
         </div>
-      </Router>
-    )
-  }
-}
+      </Router> */

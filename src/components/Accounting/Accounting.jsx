@@ -1,9 +1,9 @@
-import React from 'react';
-import '../styles/Spiritualite.css';
+import React from 'react'
+import '../../styles/Spiritualite.css'
 
-export default class InterestingSubject extends React.Component {
+export default class Accounting extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             side: this.props.location.pathname.split('/')[1]
         }
@@ -12,12 +12,12 @@ export default class InterestingSubject extends React.Component {
     render() {
         return (
             <div id='Main'>
-                <h1>Sujet</h1>
+                <h1>Comptabilité</h1>
                 <p> pathname from location props={this.state.side}</p>
                 <p> pathname from match props={this.props.match.path}</p>
                 <p> url from match props={this.props.match.url}</p>
             </div>
-
         )
+
     }
 }

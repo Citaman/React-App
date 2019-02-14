@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Spiritualite.css';
+import '../../styles/Spiritualite.css'
 
 export default class Predication extends React.Component {
     constructor(props) {

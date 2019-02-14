@@ -1,13 +1,14 @@
 import React from 'react'
 import './NavBar.css'
 import { Link } from "react-router-dom"
-import Arrow from '../../Icon/down-arrow.svg'
 export default class NavBar extends React.Component {
     constructor(props) {
         super(props)
 
         this.state = {
             Title: 'Spiritualié',
+            side : this.props.location.pathname.split('/')[1],
+            tabSelected : this.props.location.pathname.split('/')[2],
             list_nav: ['Prédication',
                 'Acitvité',
                 'Étude',
@@ -18,9 +19,11 @@ export default class NavBar extends React.Component {
                 '/spirituality/project']
         }
     }
-
+    change_tabSelected(idx){
+        this.setState({tabSelected : this.state.list_link[idx].split('/')[2]})
+    }
     nav_button() {
-        return this.state.list_nav.map((element, idx) => <Link className='Link' to={this.state.list_link[idx]}><div className='nav-Button-wrapper'>
+        return this.state.list_nav.map((element, idx) => <Link className='Link' to={this.state.list_link[idx]} onClick={() => this.change_tabSelected(idx)}><div className='nav-Button-wrapper'>
             <p className='nav-Button'>{element}</p>
         </div></Link>)
     }
@@ -32,6 +35,7 @@ export default class NavBar extends React.Component {
                 </div>
                 <div>
                     {this.nav_button()}
+                    <div>{this.state.side+"  "+this.state.tabSelected}</div>
                 </div>
                 <div className='svg'>
                     <Link className='Link' to='/physic/activity'>
