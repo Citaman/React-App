@@ -4,9 +4,7 @@ import '../styles/Spiritualite.css'
 export default class Accounting extends React.Component {
     constructor(props) {
         super(props)
-
-        this.state = {
-        }
+        this.state = {}
     }
     
     render() {

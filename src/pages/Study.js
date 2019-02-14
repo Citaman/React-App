@@ -4,10 +4,7 @@ import '../styles/Spiritualite.css';
 export default class Study extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            
-        }
+        this.state = {}
     }
     
     render() {
