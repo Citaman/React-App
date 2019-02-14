@@ -9,7 +9,7 @@ export default class Activity extends React.Component {
     
     render() {
         return (
-                <div id='Main'>Activité</div>
+                <div id='Main'>Activité pathname={this.props.location.pathname}</div>
         )
     }
 }

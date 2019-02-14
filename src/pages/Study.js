@@ -9,7 +9,7 @@ export default class Study extends React.Component {
     
     render() {
         return (
-                <div id='Main'>Etude</div>
+                <div id='Main'>Etude pathname={this.props.location.pathname}</div>
         )
     }
 }

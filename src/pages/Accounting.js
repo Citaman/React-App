@@ -9,7 +9,7 @@ export default class Accounting extends React.Component {
     
     render() {
         return (
-                <div id='Main'>Comptabilité</div>
+                <div id='Main'>Comptabilité pathname={this.props.location.pathname}</div>
         )
     }
 }

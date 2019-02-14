@@ -9,7 +9,7 @@ export default class Predication extends React.Component {
     
     render() {
         return (
-                <div id='Main'>Prédication</div>
+                <div id='Main'>Prédication pathname={this.props.location.pathname}</div>
         )
     }
 }

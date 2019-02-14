@@ -9,7 +9,7 @@ export default class Project extends React.Component {
     
     render() {
         return (
-                <div id='Main'>Projet</div>
+                <div id='Main'>Projet pathname={this.props.location.pathname}</div>
         )
     }
 }

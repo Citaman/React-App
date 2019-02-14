@@ -6,7 +6,6 @@ import InterestingSubject from './pages/InterestingSubject'
 import Predication from './pages/Predication'
 import Project from './pages/Project'
 import Study from './pages/Study'
-import Home from './pages/Home'
 import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 

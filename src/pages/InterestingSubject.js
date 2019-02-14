@@ -9,7 +9,7 @@ export default class InterestingSubject extends React.Component {
     
     render() {
         return (
-                <div id='Main'>Sujet Intéressent</div>
+                <div id='Main'>Sujet Intéressent pathname={this.props.location.pathname}</div>
         )
     }
 }
