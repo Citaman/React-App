@@ -4,12 +4,20 @@ import '../styles/Spiritualite.css';
 export default class InterestingSubject extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            side: this.props.location.pathname.split('/')[1]
+        }
     }
-    
+
     render() {
         return (
-                <div id='Main'>Sujet Intéressent pathname={this.props.location.pathname}</div>
+            <div id='Main'>
+                <h1>Sujet</h1>
+                <p> pathname from location props={this.state.side}</p>
+                <p> pathname from match props={this.props.match.path}</p>
+                <p> url from match props={this.props.match.url}</p>
+            </div>
+
         )
     }
 }
