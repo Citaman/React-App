@@ -19,8 +19,8 @@ export default class NavBar extends React.Component {
     }
     
     nav_button() {
-        return this.state.list_nav.map((element,idx) => <Link className='Link' to ={this.state.list_link[idx]}><div className='nav-Button-wrapper-default'>
-            <p className='nav-Button-default'>{element}</p>
+        return this.state.list_nav.map((element,idx) => <Link className='Link' to ={this.state.list_link[idx]}><div className='nav-Button-wrapper'>
+            <p className='nav-Button'>{element}</p>
         </div></Link>)
     }
     render() {

@@ -15,29 +15,36 @@
     padding: 10px;
     margin-bottom: 3em;
 }
-.nav-Button{
+.nav-Button-select{
     font: 20px 'Futura';
     color:#6BFFB8 ;
     margin: 0.3em 0 0.3em 1.5em;
 }
-.nav-Button-default{
+.nav-Button{
     font: 20px 'Futura';
     color:white ;
    
     margin: 0.3em 0 0.3em 1.5em;
 }
+.nav-Button-wrapper-select{
+    margin: 4em;
+    margin-right: 0px;
+    border-radius: 25px 0 0 25px;
+    background-color: white;
+    padding : 1px;
+}
 .nav-Button-wrapper{
     margin: 4em;
     margin-right: 0px;
     border-radius: 25px 0 0 25px;
-    background-color:  #6BFFB8;
+    background-color:rgba(0,0,0, 0.4);
     padding : 1px;
 }
-.nav-Button-default{
+.nav-Button-wrapper:hover{
     margin: 4em;
     margin-right: 0px;
     border-radius: 25px 0 0 25px;
-    background-color:transparent;
+    background-color:rgba(255,255,255, 0.4);
     padding : 1px;
 }
 .Link{
