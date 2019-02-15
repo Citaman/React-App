@@ -1,0 +1,15 @@
+.container-detail{
+    background-color: #252627;
+    height: 50%;
+    color: white;
+}
+.h1-Predication{
+    margin: 0;
+    color: #6BFFB8;
+    text-align: center;
+}
+.Main-Predication{
+    background-color:dimgray;
+    flex: 10;
+    box-shadow: -2px 0px 3px gray;
+}

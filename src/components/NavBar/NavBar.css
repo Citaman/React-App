@@ -1,4 +1,4 @@
-#Nav_bar {
+.Nav_bar {
     background-image: url("../../images/cosmos-dark-dusk.jpg");
     flex: 2;
     background-size: cover;

@@ -1,3 +1,3 @@
-import GoogleMap from './GoogleMap';
+import MapMark from './GoogleMap';
 
-export default GoogleMap;
+export default MapMark;

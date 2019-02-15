@@ -88,7 +88,7 @@ export default class NavBar extends React.Component {
     }
     render() {
         return (
-            <div id='Nav_bar'>
+            <div className='Nav_bar'>
                 <div className='header' style={{backgroundColor : this.state.background}}>
                     <div className='Title-header'>{this.state.Title}</div>
                 </div>
