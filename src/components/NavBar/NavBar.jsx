@@ -43,15 +43,14 @@ export default class NavBar extends React.Component {
             return this.state.tabSelected == element ? '-select-P' : ' '
     }
     componentWillReceiveProps(props){
-        this.setState({side : props.location.pathname.split('/')[1]})
+        this.setState({side : props.location.pathname.split('/')[1] })
+        this.change_switchPageLink()
+        this.change_color()
+        this.change_backgroung()
+        this.change_title()
     }
     change_switchPageLink(){
-        //this.setState({side : this.state.side == 'spirituality' ? 'physic' : 'spirituality'}) 
-        console.log(this.props.location)
         this.setState({switchPageLink : this.state.side == 'spirituality' ? '/physic/activity' : '/spirituality/predication'})
-        this.setState({color : this.state.side == 'spirituality' ? '#E71D36' : '#6BFFB8' })
-        this.setState({background : this.state.side == 'spirituality' ?  '#6BFFB8' :'#E71D36' })
-        this.setState({Title : this.state.side == 'spirituality' ? 'Spirituel' : 'Physique'})
     }
     change_color(){
         this.setState({color : this.state.side == 'spirituality' ? '#E71D36' : '#6BFFB8' })
@@ -62,12 +61,7 @@ export default class NavBar extends React.Component {
     change_title(){
         this.setState({Title : this.state.side == 'spirituality' ? 'Spirituel' : 'Physique'})
     }
-    
-    change_waite(){
-        var a = setInterval(this.change_switchPageLink(),5)
 
-        setTimeout(clearInterval(a),1500)
-    }
     nav_button() {
         if(this.state.side == 'spirituality'){
            
@@ -117,16 +111,3 @@ export default class NavBar extends React.Component {
         )
     }
 }
-/* this.setState({color :  '#E71D36'  })
-            this.setState({background : '#6BFFB8'})
-            this.setState({Title :'Spirituel'}) */
-/*        this.setState({color :  '#6BFFB8' })
-        this.setState({background : '#E71D36' })
-        this.setState({Title : 'Physique'})*/
-/*
-onClick={() => this.change_waite()}{
-                        pathname: '/courses',
-                        search: '?sort=name',
-                        hash: '#the-hash',
-                        state: { fromDashboard: true }
-                      }*/
