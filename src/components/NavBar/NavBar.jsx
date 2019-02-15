@@ -26,7 +26,8 @@ export default class NavBar extends React.Component {
                 '/physic/accounting',
                 '/physic/project'],
             switchPageLink : '/physic/activity',
-            color: 'red'
+            color: '#E71D36',
+            background : '#6BFFB8',
         }
     }
     change_tabSelected(idx) {
@@ -41,14 +42,35 @@ export default class NavBar extends React.Component {
         else
             return this.state.tabSelected == element ? '-select-P' : ' '
     }
+    componentWillReceiveProps(props){
+        this.setState({side : props.location.pathname.split('/')[1]})
+    }
     change_switchPageLink(){
         //this.setState({side : this.state.side == 'spirituality' ? 'physic' : 'spirituality'}) 
-        this.setState({switchPageLink : this.props.location.pathname.split('/')[1] == 'spirituality' ? '/physic/activity' : '/spirituality/predication'})
-        this.setState({color : this.props.location.pathname.split('/')[1] == 'spirituality' ? '#E71D36' : '#6BFFB8' })
-        this.setState({Title : this.props.location.pathname.split('/')[1] == 'spirituality' ? 'Spirituel' : 'Physique'})
+        console.log(this.props.location)
+        this.setState({switchPageLink : this.state.side == 'spirituality' ? '/physic/activity' : '/spirituality/predication'})
+        this.setState({color : this.state.side == 'spirituality' ? '#E71D36' : '#6BFFB8' })
+        this.setState({background : this.state.side == 'spirituality' ?  '#6BFFB8' :'#E71D36' })
+        this.setState({Title : this.state.side == 'spirituality' ? 'Spirituel' : 'Physique'})
+    }
+    change_color(){
+        this.setState({color : this.state.side == 'spirituality' ? '#E71D36' : '#6BFFB8' })
+    }
+    change_backgroung(){
+        this.setState({background : this.state.side == 'spirituality' ?  '#6BFFB8' :'#E71D36' })
+    }
+    change_title(){
+        this.setState({Title : this.state.side == 'spirituality' ? 'Spirituel' : 'Physique'})
+    }
+    
+    change_waite(){
+        var a = setInterval(this.change_switchPageLink(),5)
+
+        setTimeout(clearInterval(a),1500)
     }
     nav_button() {
-        if(this.state.side == 'spirituality')
+        if(this.state.side == 'spirituality'){
+           
             return (
                 this.state.list_nav_Spirituel.map((element, idx) =>
                     <Link className='Link'
@@ -58,8 +80,9 @@ export default class NavBar extends React.Component {
                             <p className={'nav-Button' + this.selectedOrNot(this.state.list_link_Spirituel[idx].split('/')[2])}>{element}</p>
                         </div>
                     </Link>
-                ))
-        else
+                ))}
+        else{
+ 
             return (
                 this.state.list_nav_Physic.map((element, idx) =>
                     <Link className='Link'
@@ -69,12 +92,12 @@ export default class NavBar extends React.Component {
                             <p className={'nav-Button' + this.selectedOrNot(this.state.list_link_Physic[idx].split('/')[2])}>{element}</p>
                         </div>
                     </Link>
-                ))
+                ))}
     }
     render() {
         return (
             <div id='Nav_bar'>
-                <div className='header'>
+                <div className='header' style={{backgroundColor : this.state.background}}>
                     <div className='Title-header'>{this.state.Title}</div>
                 </div>
                 <div>
@@ -82,7 +105,7 @@ export default class NavBar extends React.Component {
                     <div>{this.state.side + "  " + this.state.tabSelected}</div>
                 </div>
                 <div className='svg'>
-                    <Link className='Link' to={this.state.switchPageLink} onClick={() => this.change_switchPageLink()}>
+                <Link className='Link' to={this.state.switchPageLink} >
                         <svg width='50' height='50' version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlnsXlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
                             <g>
                                 <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill={this.state.color} />
@@ -94,3 +117,16 @@ export default class NavBar extends React.Component {
         )
     }
 }
+/* this.setState({color :  '#E71D36'  })
+            this.setState({background : '#6BFFB8'})
+            this.setState({Title :'Spirituel'}) */
+/*        this.setState({color :  '#6BFFB8' })
+        this.setState({background : '#E71D36' })
+        this.setState({Title : 'Physique'})*/
+/*
+onClick={() => this.change_waite()}{
+                        pathname: '/courses',
+                        search: '?sort=name',
+                        hash: '#the-hash',
+                        state: { fromDashboard: true }
+                      }*/
