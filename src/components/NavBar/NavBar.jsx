@@ -64,7 +64,6 @@ export default class NavBar extends React.Component {
 
     nav_button() {
         if(this.state.side == 'spirituality'){
-           
             return (
                 this.state.list_nav_Spirituel.map((element, idx) =>
                     <Link className='Link'
@@ -76,7 +75,6 @@ export default class NavBar extends React.Component {
                     </Link>
                 ))}
         else{
- 
             return (
                 this.state.list_nav_Physic.map((element, idx) =>
                     <Link className='Link'
@@ -96,7 +94,6 @@ export default class NavBar extends React.Component {
                 </div>
                 <div>
                     {this.nav_button()}
-                    <div>{this.state.side + "  " + this.state.tabSelected}</div>
                 </div>
                 <div className='svg'>
                 <Link className='Link' to={this.state.switchPageLink} >

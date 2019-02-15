@@ -10,10 +10,9 @@ import Project from './components/Project'
 import InterestingSubject from './components/InterestingSubject'
 import { BrowserRouter as Router, Route,Redirect } from "react-router-dom"
 
-const Nomatch = ()=>(
+const Nomatch = () =>(
   <Redirect to='/spirituality/predication'/>
 )
-
 export default class App extends Component {
 
   render() {
