@@ -31,16 +31,16 @@ export default class NavBar extends React.Component {
         }
     }
     change_tabSelected(idx) {
-        if(this.state.side == 'spirituality')
+        if(this.state.side === 'spirituality')
             this.setState({ tabSelected: this.state.list_link_Spirituel[idx].split('/')[2] })
         else
             this.setState({ tabSelected: this.state.list_link_Physic[idx].split('/')[2] })
     }
     selectedOrNot(element) {
-        if(this.state.side == 'spirituality')
-            return this.state.tabSelected == element ? '-select-S' : ' '
+        if(this.state.side === 'spirituality')
+            return this.state.tabSelected === element ? '-select-S' : ' '
         else
-            return this.state.tabSelected == element ? '-select-P' : ' '
+            return this.state.tabSelected === element ? '-select-P' : ' '
     }
     componentWillReceiveProps(props){
         this.setState({side : props.location.pathname.split('/')[1] })
@@ -50,20 +50,20 @@ export default class NavBar extends React.Component {
         this.change_title()
     }
     change_switchPageLink(){
-        this.setState({switchPageLink : this.state.side == 'spirituality' ? '/physic/activity' : '/spirituality/predication'})
+        this.setState({switchPageLink : this.state.side === 'spirituality' ? '/physic/activity' : '/spirituality/predication'})
     }
     change_color(){
-        this.setState({color : this.state.side == 'spirituality' ? '#E71D36' : '#6BFFB8' })
+        this.setState({color : this.state.side === 'spirituality' ? '#E71D36' : '#6BFFB8' })
     }
     change_backgroung(){
-        this.setState({background : this.state.side == 'spirituality' ?  '#6BFFB8' :'#E71D36' })
+        this.setState({background : this.state.side === 'spirituality' ?  '#6BFFB8' :'#E71D36' })
     }
     change_title(){
-        this.setState({Title : this.state.side == 'spirituality' ? 'Spirituel' : 'Physique'})
+        this.setState({Title : this.state.side === 'spirituality' ? 'Spirituel' : 'Physique'})
     }
 
     nav_button() {
-        if(this.state.side == 'spirituality'){
+        if(this.state.side === 'spirituality'){
             return (
                 this.state.list_nav_Spirituel.map((element, idx) =>
                     <Link className='Link'

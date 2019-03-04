@@ -11,7 +11,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <Router>
+   <Router>
         <div >
           <Route exact path='/' component={Spiritual} />
           <Route path='/spirituality' component={Spiritual} />
@@ -26,7 +26,6 @@ export default class App extends Component {
           <Route path='/physic/interest' />
           <Route component={Nomatch} />
         </div>
-      </Router>
-    )
+      </Router>)
   }
 }
