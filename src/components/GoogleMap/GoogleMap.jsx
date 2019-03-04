@@ -7,7 +7,7 @@ const MapMark = withScriptjs(withGoogleMap(props =>
       defaultCenter={{ lat: 48.7854032, lng: 2.437342 }}
     >
       <Marker
-        position={{ lat: -34.397, lng: 150.644 }}
+        position={{ lat: 48.7854032, lng: 2.43734 }}
       />
     </GoogleMap>
   ));
